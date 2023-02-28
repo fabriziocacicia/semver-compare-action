@@ -1,5 +1,5 @@
-name: "Name of the Action"
-description: "Description of the Action"
+name: "Semantic Versions Comparator"
+description: "Compare and validate two semver strings"
 author: "mail@fabriziocacicia.com"
 
 runs:
