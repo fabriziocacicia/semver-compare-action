@@ -1,6 +1,6 @@
 {
   "name": "semver-compare-action-j",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A GitHub Action that compares two string semver values",
   "main": "index.js",
   "scripts": {
