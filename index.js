@@ -1,6 +1,10 @@
 const core = require('@actions/core');
 const compareVersions = require('compare-versions');
 
+const isValidOperator = function(operator) {
+    return ['>', '<', '=', '<=', '>='].includes(operator);
+}
+
 try {
     const firstToCompare = core.getInput('first');
     const secondToCompare = core.getInput('second');
@@ -16,7 +20,7 @@ try {
     
     console.log(`Operator ${operator}`);
     if(operator) {
-        if(['>', '<', '=', '<=', '>='].includes(operator)) {
+        if(!isValidOperator(operator)) {
             throw new Error(`Unvalid operator ${operator}. Only the following ar allowed: '>', '<', '=', '<=', '>='`)
         }
     } else {
