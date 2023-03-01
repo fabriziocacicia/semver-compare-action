@@ -38,3 +38,6 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+### Specific to this project
+node_modules/
