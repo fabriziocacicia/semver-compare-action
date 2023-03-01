@@ -12,3 +12,6 @@ jobs:
            fetch-depth: 0
       - name: Run the Action
         uses: ./
+        with:
+          first: '2.0.0'
+          second: '1.0.0'
