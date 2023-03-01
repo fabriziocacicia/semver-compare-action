@@ -3,17 +3,12 @@ A GitHub Action that compares two string semver values
 
 ## Inputs
 
-### `first`
+| Name | Description | Default value | Required |
+|---|---|:---:|:---:|
+| first | The first value to compare |   | YES |
+| second | The second value to compare |   | YES |
+| operator | The compartor symbol to use. Only `>`, `=`, `<`, `=<`, `=>` are allowed | `>` | NO |
 
-**Required** The first value to compare
-
-### `second`
-
-**Required** The second value to compare
-
-### `operator`
-
-**Required** The compartor symbol to use. Only `>`, `=`, `<`, `=<`, `=>` are allowed. Default: `>`
 
 ## Outputs
 
