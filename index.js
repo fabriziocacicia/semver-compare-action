@@ -13,7 +13,8 @@ try {
     if(!secondToCompare){
         throw new Error("'second' input is missing")
     }
-
+    
+    console.log(`Operator ${operator}`);
     if(operator) {
         if(['>', '<', '=', '<=', '>='].includes(operator)) {
             throw new Error(`Unvalid operator ${operator}. Only the following ar allowed: '>', '<', '=', '<=', '>='`)
