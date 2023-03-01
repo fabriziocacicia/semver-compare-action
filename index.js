@@ -27,7 +27,7 @@ try {
         operator = '>'
     }
 
-  const result = compareVersions.compare(first, second, operator)
+  const result = compareVersions.compare(firstToCompare, secondToCompare, operator)
   core.setOutput("result", result);
   console.log(`Comparison result is ${result}`);
 
