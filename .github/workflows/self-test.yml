@@ -10,8 +10,38 @@ jobs:
       - uses: actions/checkout@v3
         with:
            fetch-depth: 0
-      - name: Run the Action
+      - name: Test 2.0.0 > 1.0.0 without operator specification
         uses: ./
         with:
           first: '2.0.0'
           second: '1.0.0'
+      - name: Test 2.0.0 > 1.0.0
+        uses: ./
+        with:
+          first: '2.0.0'
+          second: '1.0.0'
+          operator: '>'
+      - name: Test 2.0.0 < 1.0.0
+        uses: ./
+        with:
+          first: '2.0.0'
+          second: '1.0.0'
+          operator: '<'
+      - name: Test 1.0.0 < 2.0.0
+        uses: ./
+        with:
+          first: '1.0.0'
+          second: '2.0.0'
+          operator: '<'
+      - name: Test 1.0.0 = 1.0.0
+        uses: ./
+        with:
+          first: '1.0.0'
+          second: '1.0.0'
+          operator: '='
+      - name: Test 0.1.0 <= 0.1.0
+        uses: ./
+        with:
+          first: '0.1.0'
+          second: '0.1.0'
+          operator: '<='
