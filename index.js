@@ -18,7 +18,6 @@ try {
         throw new Error("'second' input is missing")
     }
     
-    console.log(`Operator ${operator}`);
     if(operator) {
         if(!isValidOperator(operator)) {
             throw new Error(`Unvalid operator ${operator}. Only the following ar allowed: '>', '<', '=', '<=', '>='`)
