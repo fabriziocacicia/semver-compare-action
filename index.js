@@ -24,6 +24,7 @@ try {
 
   const result = compareVersions.compare(argv.head, argv.base, operator)
   core.setOutput("result", result);
+  console.log(`Comparison result is ${result}`);
 
 } catch (error) {
   core.setFailed(error.message);
