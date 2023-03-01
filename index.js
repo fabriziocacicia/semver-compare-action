@@ -22,7 +22,7 @@ try {
         operator = '>'
     }
 
-  const result = compareVersions.compare(argv.head, argv.base, operator)
+  const result = compareVersions.compare(first, second, operator)
   core.setOutput("result", result);
   console.log(`Comparison result is ${result}`);
 
