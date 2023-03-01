@@ -29,7 +29,7 @@ try {
 
   const result = compareVersions.compare(firstToCompare, secondToCompare, operator)
   core.setOutput("result", result);
-  console.log(`Comparison result is ${result}`);
+  console.log(`'${firstToCompare} ${operator} ${secondToCompare} comparison result is ${result}`);
 
 } catch (error) {
   core.setFailed(error.message);
