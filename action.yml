@@ -2,6 +2,22 @@ name: "Semantic Versions Comparator"
 description: "Compare and validate two semver strings"
 author: "mail@fabriziocacicia.com"
 
+inputs:
+  first:
+    description: 'The first value to compare'
+    required: true
+  second:
+    description: 'The second value to compare'
+    required: true
+  operator:
+    description: 'The compartor symbol to use. Only >, =, <, =<, => are allowed.'
+    required: false
+    default: '>'
+
+outputs:
+  result:
+    description: 'The result of the comparison. Can be true or false.'
+
 runs:
-  using: "can be composite/docker/..."
-  ...
+  using: 'node16'
+  main: 'index.js'
