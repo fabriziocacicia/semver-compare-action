@@ -2,7 +2,7 @@
   "name": "semver-compare-action",
   "version": "0.1.0",
   "description": "A GitHub Action that compares two string semver values",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "prepare": "ncc build index.js -o dist --source-map --license license.txt",
     "test": "echo \"Error: no test specified\" && exit 1"
