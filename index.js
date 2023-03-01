@@ -15,8 +15,8 @@ try {
     }
 
     if(operator) {
-        if(['>', '<', '=', '<=', '>='].includes(arg.operator)) {
-            throw new Error(`Unvalid operator ${arg.operator}. Only the following ar allowed: '>', '<', '=', '<=', '>='`)
+        if(['>', '<', '=', '<=', '>='].includes(operator)) {
+            throw new Error(`Unvalid operator ${operator}. Only the following ar allowed: '>', '<', '=', '<=', '>='`)
         }
     } else {
         operator = '>'
