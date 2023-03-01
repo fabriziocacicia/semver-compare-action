@@ -26,7 +26,7 @@ The result of the comparison. Can be `true` or `false`.
 Add the following step to your workflow:
 
 ```yaml
-uses: fabriziocacicia/semver-compare-action-j@v0.1.0
+uses: fabriziocacicia/semver-compare-action@v0.1.0
 with:
   first: '0.1.0'
   second: '0.2.0'
