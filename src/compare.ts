@@ -4,6 +4,10 @@ function isValidOperator(operator: string): boolean {
   return ['>', '<', '=', '<=', '>='].includes(operator)
 }
 
+export const __test__ = {
+    isValidOperator
+}
+
 export function compare(
   firstToCompare: string,
   secondToCompare: string,
@@ -34,3 +38,4 @@ export function compare(
     operator as compareVersions.CompareOperator
   )
 }
+
