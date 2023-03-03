@@ -5,7 +5,7 @@ function isValidOperator(operator: string): boolean {
 }
 
 export const __test__ = {
-    isValidOperator
+  isValidOperator
 }
 
 export function compare(
@@ -38,4 +38,3 @@ export function compare(
     operator as compareVersions.CompareOperator
   )
 }
-
