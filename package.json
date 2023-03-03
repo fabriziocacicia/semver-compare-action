@@ -1,18 +1,25 @@
 {
   "name": "semver-compare-action",
   "version": "0.1.0",
+  "private": true,
   "description": "A GitHub Action that compares two string semver values",
-  "main": "dist/index.js",
+  "main": "lib/main.js",
   "scripts": {
-    "prepare": "ncc build index.js -o dist --source-map --license license.txt",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "format": "prettier --write '**/*.ts'",
+    "format-check": "prettier --check '**/*.ts'",
+    "lint": "eslint src/**/*.ts",
+    "package": "ncc build -o dist --source-map --license license.txt",
+    "test": "jest",
+    "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
+  
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fabriziocacicia/semver-compare-action.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Fabrizio Cacicia",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fabriziocacicia/semver-compare-action/issues"
@@ -23,6 +30,16 @@
     "compare-versions": "^6.0.0-rc.1"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.36.1"
+    "@types/node": "^18.14.2",
+    "@typescript-eslint/parser": "^5.54.0",
+    "@vercel/ncc": "^0.36.1",
+    "eslint": "^8.35.0",
+    "eslint-plugin-github": "^4.6.1",
+    "eslint-plugin-jest": "^27.2.1",
+    "jest": "29.4.3",
+    "js-yaml": "^4.1.0",
+    "prettier": "^2.8.4",
+    "ts-jest": "^29.0.5",
+    "typescript": "^4.9.5"
   }
 }
