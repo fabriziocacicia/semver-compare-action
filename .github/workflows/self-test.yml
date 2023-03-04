@@ -3,6 +3,13 @@ on:
   workflow_dispatch
   
 jobs:
+  build-format-and-test:
+    name: Build, format and test the TypeScript project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: npm run all
   test-action:
     name: Test the Action
     runs-on: ubuntu-latest
