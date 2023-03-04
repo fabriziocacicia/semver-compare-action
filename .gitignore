@@ -38,3 +38,6 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+# TypeScript project
+node_modules/
