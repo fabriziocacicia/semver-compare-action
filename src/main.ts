@@ -5,7 +5,7 @@ async function run(): Promise<void> {
   try {
     const firstToCompare: string = core.getInput('first')
     const secondToCompare: string = core.getInput('second')
-    var operator: string = core.getInput('operator')
+    const operator: string = core.getInput('operator')
 
     const result = compare(firstToCompare, secondToCompare, operator)
     core.setOutput('result', result)
